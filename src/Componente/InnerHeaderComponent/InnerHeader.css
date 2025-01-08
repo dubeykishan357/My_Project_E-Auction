@@ -1,0 +1,10 @@
+.InnerHead{
+    background-color: bisque;
+    color: black;
+    height: 60px;
+    width: 100%;
+    font-size: 36px;
+    font-weight: bold;
+    text-align: center;
+    justify-content: center;
+}

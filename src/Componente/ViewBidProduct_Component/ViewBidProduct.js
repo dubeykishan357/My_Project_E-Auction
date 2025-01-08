@@ -19,7 +19,7 @@ function ViewBidProduct() {
         }).catch((error) => {
             console.log(error);
         })
-    }, [])
+    }, [params._id])
 
 
     return (
@@ -53,7 +53,7 @@ function ViewBidProduct() {
                                           <td>{row.description}</td>
                                           <td>{row.baseprice}</td>
                                           <td>{
-                                            <img src={` ../assets/upload/product/${row.piconnm}`}class="h-50 w-50" />
+                                            <img src={` ../assets/upload/product/${row.piconnm}`}class="h-50 w-50" alt={`Product ${row.title}`} />
                                             }</td>
                                           {/* <td>{row.piconnm}</td> */}
                                           <td>{row.info}</td>

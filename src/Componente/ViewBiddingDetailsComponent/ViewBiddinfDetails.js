@@ -21,7 +21,7 @@ function ViewBiddingDetails() {
         }).catch((error) => {
             console.log(error);
         })
-    }, [])
+    }, [params._id])
    
    
     return (

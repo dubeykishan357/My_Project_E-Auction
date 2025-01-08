@@ -5,7 +5,7 @@ function Banner() {
   const [BannerContent, setBannerContent] = useState();
 
   useEffect(() => {
-    if (localStorage.getItem("token") !=undefined) {
+    if (localStorage.getItem("token") !== undefined) {
       setBannerContent(<></>);
     } else {
       setBannerContent(

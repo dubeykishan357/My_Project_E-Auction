@@ -9,9 +9,6 @@ function ProductList() {
   const params = useParams();
   const [pList, setPList] = useState([]);
 
-  const handlebidproduct = () => {
-
-  }
 
 
   useEffect(() => {
@@ -37,7 +34,7 @@ function ProductList() {
     }).catch((error) => {
       console.log(error);
     })
-  }, [])
+  }, [params.subcatnm])
 
   return (
     <>
@@ -57,7 +54,7 @@ function ProductList() {
                   <table id="ptable" border="1"><tr>
                     <td rowspan="3">
                       <center>
-                        <img src={`../assets/upload/product/${row.piconnm}`} height="100" width="150" />
+                        <img src={`../assets/upload/product/${row.piconnm}`} height="100" width="150" alt={`Product ${row.title}`}  />
                       </center>
                     </td>
                     <td><b>Title : {row.title} </b></td>

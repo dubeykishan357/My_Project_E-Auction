@@ -18,7 +18,7 @@ function SubCategories() {
     }).catch((error) => {
       console.log(error);
     })
-  },[])
+  },[params.catnm])
 
   return (
     <>
@@ -35,7 +35,8 @@ function SubCategories() {
                   scList.map((row) => (
                     < Link to={`/productList/${row.subcatnm}`}>
                       <div class="categorypart">
-                        <img src={`../assets/upload/subcaticon/${row.subcaticonnm}`} height="100" width="150" />
+                        <img src={`../assets/upload/subcaticon/${row.subcaticonnm}`} height="100" width="150" 
+                        alt={`Subcategory ${row.subcatnm}`} />
                         <br />
                         <b>{row.subcatnm}</b>
                       </div>

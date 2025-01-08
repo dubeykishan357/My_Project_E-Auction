@@ -3,6 +3,7 @@ import axios from 'axios';
 import { userapiurl } from '../../userapiurl';
 import { useState } from 'react';
 import {useNavigate} from 'react-router-dom';
+import InnerHeader from '../InnerHeaderComponent/InnerHeader';
 
 
 function Login()
@@ -16,8 +17,8 @@ function Login()
   
   const handlesubmit = () => {
    
-    if (email == undefined) setOutput("*email is required");
-    else if (password == undefined) setOutput("*password is required");
+    if (email === undefined) setOutput("*email is required");
+    else if (password === undefined) setOutput("*password is required");
     
     else {
       var userDetails = {
@@ -40,7 +41,7 @@ function Login()
         localStorage.setItem("role",user.role);
           
 
-        (user.role=="admin")?navigate("/admin"):navigate("/user");
+        (user.role==="admin")?navigate("/admin"):navigate("/user");
         setOutput1("Login succefully....");
         // setPassword("");
        }).catch(()=>{
@@ -59,9 +60,11 @@ function Login()
   
   return(
     <>
-
+    <div>
+      <InnerHeader text="Login Us" />
+    </div>
     
-    <div class="container-fluid py-6 px-5">
+    <div class="container-fluid py-6 px-5 justi">
         <div class="row g-5">
             <div class="col-lg-6 bg-light">
                 <h1 class="display-5 text-uppercase mb-4">Login <span class="text-primary">Section</span> </h1>

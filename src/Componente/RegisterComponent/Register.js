@@ -2,6 +2,7 @@ import "./Register.css";
 import { useState } from "react";
 import axios from 'axios';
 import { userapiurl } from "../../userapiurl";
+import InnerHeader from "../InnerHeaderComponent/InnerHeader";
 
 
 function Register() {
@@ -23,12 +24,12 @@ function Register() {
 
   const handlesubmit = () => {
     if(!name) setOutput1("*Name is required");
-    if(!email) setOutput1("*email is required");
-    if(!password) setOutput1("*password is required");
-    if(!mobile) setOutput1("*mobile is required");
-    if(!gender) setOutput1("*gender is required");
-    if(!city) setOutput1("*city is required");
-    if(!address) setOutput1("*address is required");
+    else if(!email) setOutput1("*email is required");
+    else if(!password) setOutput1("*password is required");
+    else if(!mobile) setOutput1("*mobile is required");
+    else if(!gender) setOutput1("*gender is required");
+    else if(!city) setOutput1("*city is required");
+    else if(!address) setOutput1("*address is required");
     // if (name == undefined) setOutput("*Name is required");
     // else if (email == undefined) setOutput("*email is required");
     // else if (password == undefined) setOutput("*password is required");
@@ -71,6 +72,9 @@ function Register() {
   };
   return (
     <>
+    <div>
+      <InnerHeader text="Register Here!!!" />
+    </div>
       <section class=" gradient-custom">
         <div class="container py-5 h-100">
           <div class="row justify-content-center align-items-center h-100 ">
